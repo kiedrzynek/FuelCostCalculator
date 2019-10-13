@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-image: url('Sergio-R-on-Unsplash-min.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
