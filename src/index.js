@@ -1,1 +1,1 @@
-import Hello from './calc.jsx';
+import Calc from './calc.jsx';
