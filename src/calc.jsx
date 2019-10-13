@@ -4,19 +4,32 @@ import ReactDOM from "react-dom";
 class Calc extends Component {
     constructor(props) {
         super(props);
+        this.state = {price: 0, distance: 0, consumption: 0};
+        this.handlePriceChange = this.handlePriceChange.bind(this);
     }
+
+    calculateFuelCost() {
+        return /*this.state.distance / 100 * this.state.consumption * */this.state.price;
+    }
+
+    handlePriceChange(e) {
+        this.setState({price: e.target.value});
+    }
+
     render() {
         return(
             <div className="calc">
                 <p>Fuel Cost Calculator</p>
-                <FuelPrice/>
-                <Distance />
-                <FuelConsumption />
-                <TotalCost />
+                <FuelPrice price={this.state.price} callback={this.handlePriceChange} />
+                <Distance distance={this.state.distance} />
+                <FuelConsumption consumption={this.state.consumption} />
+                <TotalCost cost={this.calculateFuelCost()} />
             </div>
         );
     }
 }
+
+
 
 class FuelPrice extends Component {
     constructor(props) {
@@ -26,7 +39,7 @@ class FuelPrice extends Component {
         return(
             <div className="fuelPrice">
                 <label>Fuel price</label>
-                <input type="number" placeholder="per liter"></input>
+                <input type="number" placeholder="per liter" onChange={this.props.callback}></input>
             </div>
         );
     }
@@ -61,13 +74,11 @@ class FuelConsumption extends Component {
 }
 
 class TotalCost extends Component {
-    constructor(props) {
-        super(props);
-    }
+
     render() {
         return(
             <div>
-            This journey would cost you {}.
+            This journey would cost you {this.props.cost}.
             </div>
         );
     }
@@ -75,7 +86,7 @@ class TotalCost extends Component {
 
 
 ReactDOM.render(
-    <Calc/>,
+    <Calc />,
     document.getElementById('root')
 );
 
