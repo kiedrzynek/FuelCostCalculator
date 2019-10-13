@@ -6,14 +6,24 @@ class Calc extends Component {
         super(props);
         this.state = {price: 0, distance: 0, consumption: 0};
         this.handlePriceChange = this.handlePriceChange.bind(this);
+        this.handleDistanceChange = this.handleDistanceChange.bind(this);
+        this.handleConsumptionChange = this.handleConsumptionChange.bind(this);
     }
 
     calculateFuelCost() {
-        return /*this.state.distance / 100 * this.state.consumption * */this.state.price;
+        return this.state.distance / 100 * this.state.consumption * this.state.price;
     }
 
     handlePriceChange(e) {
         this.setState({price: e.target.value});
+    }
+
+    handleDistanceChange(e) {
+        this.setState({distance: e.target.value});
+    }
+
+    handleConsumptionChange(e) {
+        this.setState({consumption: e.target.value});
     }
 
     render() {
@@ -21,8 +31,8 @@ class Calc extends Component {
             <div className="calc">
                 <p>Fuel Cost Calculator</p>
                 <FuelPrice price={this.state.price} callback={this.handlePriceChange} />
-                <Distance distance={this.state.distance} />
-                <FuelConsumption consumption={this.state.consumption} />
+                <Distance distance={this.state.distance} callback={this.handleDistanceChange} />
+                <FuelConsumption consumption={this.state.consumption} callback={this.handleConsumptionChange} />
                 <TotalCost cost={this.calculateFuelCost()} />
             </div>
         );
@@ -53,7 +63,7 @@ class Distance extends Component {
         return(
             <div className="distance">
                 <label>Distance</label>
-                <input type="number" placeholder="in km"></input>
+                <input type="number" placeholder="in km" onChange={this.props.callback}></input>
             </div>
         );
     }
@@ -67,7 +77,7 @@ class FuelConsumption extends Component {
         return(
             <div className="fuel-consumption">
                 <label>Fuel consumption</label>
-                <input type="number" placeholder="liter / 100km"></input>
+                <input type="number" placeholder="liter / 100km" onChange={this.props.callback}></input>
             </div>
         );
     }
