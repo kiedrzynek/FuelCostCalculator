@@ -2,15 +2,63 @@ import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 
 class Calc extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
     render() {
         return(
-            <p>Fuel Cost Calculator</p>
+            <div className="calc">
+                <p>Fuel Cost Calculator</p>
+                <FuelPrice/>
+                <Distance />
+                <FuelConsumption />
+            </div>
         );
     }
 }
+
+class FuelPrice extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return(
+            <div className="fuelPrice">
+                <label>Fuel price</label>
+                <input type="number" placeholder="per liter"></input>
+            </div>
+        );
+    }
+}
+
+class Distance extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return(
+            <div className="distance">
+                <label>Distance</label>
+                <input type="number" placeholder="in km"></input>
+            </div>
+        );
+    }
+}
+
+class FuelConsumption extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return(
+            <div className="fuel-consumption">
+                <label>Fuel consumption</label>
+                <input type="number" placeholder="liter / 100km"></input>
+            </div>
+        );
+    }
+}
+
 
 ReactDOM.render(
     <Calc/>,
