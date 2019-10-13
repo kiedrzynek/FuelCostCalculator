@@ -12,6 +12,7 @@ class Calc extends Component {
                 <FuelPrice/>
                 <Distance />
                 <FuelConsumption />
+                <TotalCost />
             </div>
         );
     }
@@ -54,6 +55,19 @@ class FuelConsumption extends Component {
             <div className="fuel-consumption">
                 <label>Fuel consumption</label>
                 <input type="number" placeholder="liter / 100km"></input>
+            </div>
+        );
+    }
+}
+
+class TotalCost extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return(
+            <div>
+            This journey would cost you {}.
             </div>
         );
     }
