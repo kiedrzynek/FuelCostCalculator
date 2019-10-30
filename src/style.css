@@ -73,7 +73,6 @@ input:focus {
 
 .calc div:last-of-type {
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-    
     background-color: black;
     color: #dd5f2e;
 
@@ -94,4 +93,10 @@ input:focus {
     text-align: right;
 
     height: 100%;
+}
+
+img {
+    margin: 0 auto;
+    padding-left: 20%;
+    display: block;
 }

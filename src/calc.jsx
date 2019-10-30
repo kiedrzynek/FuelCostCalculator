@@ -83,12 +83,15 @@ class FuelConsumption extends Component {
     }
 }
 
+
+
 class TotalCost extends Component {
 
     render() {
         return(
             <div>
-            This journey would cost you {this.props.cost}.
+                <img src="../src/172507-128.png" />
+                This journey would cost you {this.props.cost}.
             </div>
         );
     }
