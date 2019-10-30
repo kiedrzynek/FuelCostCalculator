@@ -29,7 +29,7 @@ class Calc extends Component {
     render() {
         return(
             <div className="calc">
-                <p>Fuel Cost Calculator</p>
+                <h1>Fuel Cost Calculator</h1>
                 <FuelPrice price={this.state.price} callback={this.handlePriceChange} />
                 <Distance distance={this.state.distance} callback={this.handleDistanceChange} />
                 <FuelConsumption consumption={this.state.consumption} callback={this.handleConsumptionChange} />
@@ -91,7 +91,8 @@ class TotalCost extends Component {
         return(
             <div>
                 <img src="../src/172507-128.png" />
-                This journey would cost you {this.props.cost}.
+                <p>This journey would cost you:</p>
+                <p>{this.props.cost}</p>
             </div>
         );
     }

@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
     font-size: 12px;
 }
 
 div {
-    
     padding: 10px;
 }
 
@@ -17,13 +18,12 @@ div {
 
     background-image: linear-gradient(to bottom right, #dd5f2e, #ec5b7e);
     color: black;
-    font-family: 'Open Sans', 'Helvetica', sans-serif;
     font-weight: 100;
     line-height: 1.6;
     
 
     border-radius: 5px;
-    box-shadow: 0 40px 40px -30px rgba(44, 44, 44, 0.5);
+    box-shadow: 60px 20px 40px 5px rgba(44, 44, 44, 0.8);
 
     min-width: 50vw;
     min-height: 85vh;
@@ -35,11 +35,19 @@ div {
     transform: translate(-50%, -50%);
 }
 
-p {
-    margin-bottom: 10%;
+h1, p {
     font-size: 1.5em;
     color: white;
     padding: 10px;
+    font-weight: 100;
+}
+
+div p:nth-child(2) {
+    color: #dd5f2e;
+}
+
+div p:nth-child(3) {
+    color: #ec5b7e;
 }
 
 
@@ -85,7 +93,7 @@ input:focus {
 
     padding: 60px;
 
-    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    
     font-size: 2em;
     font-weight: 400;
     line-height: 1.6;
