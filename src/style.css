@@ -50,6 +50,13 @@ div p:nth-child(3) {
     color: #ec5b7e;
 }
 
+.calc div:nth-child(2) {
+    padding-top: 8%;
+}
+
+.calc div:nth-child(4) {
+    padding-bottom: 5%;
+}
 
 label {
     text-align: center;
