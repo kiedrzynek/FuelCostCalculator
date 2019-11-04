@@ -36,18 +36,24 @@ div {
 }
 
 h1, p {
-    font-size: 1.5em;
     color: white;
     padding: 10px;
     font-weight: 100;
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
 div p:nth-child(2) {
     color: #dd5f2e;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 div p:nth-child(3) {
     color: #ec5b7e;
+    font-size: 2em;
 }
 
 .calc div:nth-child(2) {
@@ -88,7 +94,7 @@ input:focus {
 
 .calc div:last-of-type {
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-    background-color: black;
+    background-color: rgb(32, 32, 32);
     color: #dd5f2e;
 
     border-radius: 5px 5px 5px 0;
@@ -114,4 +120,21 @@ img {
     margin: 0 auto;
     padding-left: 20%;
     display: block;
+}
+
+.love {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(15vw, 5vh);
+    color: rgb(172, 172, 172);
+}
+
+span {
+    color: #be0000; 
+}
+
+a {
+    text-decoration: none;
+    color: rgb(172, 172, 172);
 }
