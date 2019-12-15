@@ -12,7 +12,7 @@ class Calc extends Component {
     }
 
     calculateFuelCost() {
-        return this.state.distance / 100 * this.state.consumption * this.state.price;
+        return (this.state.distance / 100 * this.state.consumption * this.state.price).toFixed(2);
     }
 
     handlePriceChange(e) {
