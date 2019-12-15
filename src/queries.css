@@ -8,8 +8,12 @@
 
 /* Small phones to small tablets: from 481 to 767px */
 @media only screen and (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+
     .calc {
-        width: 90%;
+        height: 90%;
     }
 
     input {
@@ -38,7 +42,10 @@
     }
 
     .money-box {
-        width: 30%;
+        width: 15%;
+        position: absolute;
+        bottom: 38%;
+        right: 6%;
     }
 
     .love {
@@ -54,6 +61,10 @@
     div p:nth-child(2) {
         font-size: 0.9em;
         padding: 0;
+    }
+
+    h1 {
+        margin-bottom: 10px;
     }
     
     .love {
