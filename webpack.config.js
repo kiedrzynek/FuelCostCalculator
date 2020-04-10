@@ -7,11 +7,7 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      },
-        {
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-        }
+      }
     ]
   }
 };
