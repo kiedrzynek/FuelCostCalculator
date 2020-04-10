@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-import MoneyBox from './Icons/moneyBox.svg';
 
 class Calc extends Component {
     constructor(props) {
@@ -89,8 +88,7 @@ class TotalCost extends Component {
     render() {
         return(
             <div>
-                <MoneyBox className="money-box" viewBox="0 0 50 50" width="50%" height="auto"/>
-                <p>This journey would cost you:</p>
+                <p>This journey would cost&nbsp;you:</p>
                 <p>{this.props.cost}</p>
             </div>
         );
