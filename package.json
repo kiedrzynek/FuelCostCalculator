@@ -1,11 +1,13 @@
 {
-  "name": "fuelCostCalc",
+  "name": "fuel-cost-calculator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://kiedrzynek.github.io/FuelCostCalculator/",
   "scripts": {
     "start": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +28,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "^3.4.1"
