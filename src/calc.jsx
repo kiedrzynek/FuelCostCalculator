@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
+import Signature from './signature.jsx';
 
 class Calc extends Component {
     constructor(props) {
@@ -34,6 +35,7 @@ class Calc extends Component {
                 <Distance distance={this.state.distance} callback={this.handleDistanceChange} />
                 <FuelConsumption consumption={this.state.consumption} callback={this.handleConsumptionChange} />
                 <TotalCost cost={this.calculateFuelCost()} />
+                <Signature />
             </div>
         );
     }
